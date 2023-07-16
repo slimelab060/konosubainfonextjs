@@ -1,0 +1,9 @@
+.next/
+build/
+lib/
+node_modules/
+*.html
+*.md
+.gitignore
+package.json
+package-lock.json

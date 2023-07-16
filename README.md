@@ -1,34 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- PROJECT LOGO -->
+<div align="center">
+  <a href="https://github.com/github_username/repo_name">
+    <img src="doc/images/logo.png" alt="Logo" width="128" height="128">
+  </a>
 
-## Getting Started
+<h2 align="center">このファンまとめサイト UI</h2>
 
-First, run the development server:
+  <p align="center">
+    サイトのUIソースコード
+  </p>
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+[![license-shield][license-shield]][license-url]  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 1. このレポジトリについて
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+これはデザインのみを公開しているソースコードです。  
+まだ開発途中なのでコンポーネントが少ないです。  
+データは非公開です。
 
-## Learn More
+## 2. 環境構築
 
-To learn more about Next.js, take a look at the following resources:
+このサイトの開発環境は以下の通りです。  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[![Next][Next.js]][Next-url]
+[![React][React.js]][React-url]
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 2.1. 前提条件
 
-## Deploy on Vercel
+環境を構築するにはNode.jsが必要
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  ```sh
+  npm install npm@latest -g
+  ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### 2.2. Installation
+
+1. レポジトリからクローン
+
+   ```sh
+   git clone https://github.com/github_username/repo_name.git
+   ```
+
+2. 必要な依存関係をインストール
+
+   ```sh
+   npm install
+   ```
+
+3. コマンド入力でデバッグ環境構築
+
+   ```sh
+   npm run dev
+   ```
+
+## 3. ロードマップ
+
+これは現状作成するものを書いただけです。  
+期間は特になしです。  
+今後少しずつ項目は増えていきます。
+
+- [x] ホームページ
+- [ ] 記事テンプレート
+- [ ] フィルター選択
+- [ ] コードの最適化
+
+## 4.更新履歴
+
+  量が増えてきたら別の場所に移動します。  
+
+- 0.1-230716
+  - 公開
+  - Nuxt3からの移植
+
+## 5. ライセンス
+
+ MIT License.
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
+[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[product-screenshot]: doc/images/product.png
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
