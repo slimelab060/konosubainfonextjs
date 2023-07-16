@@ -1,38 +1,38 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
 
-    "extends": ["config:base"],
-    "timezone": "Asia/Tokyo",
-    "schedule": ["before 22pm"],
-    "labels": ["renovate"],
-    "prHourlyLimit": 5,
-    "prConcurrentLimit": 10,
-    "dependencyDashboard": false,
-    "automerge": false,
-    
-    "lockFileMaintenance": {
-        "enabled": true
+  "extends": ["config:base"],
+  "timezone": "Asia/Tokyo",
+  "schedule": ["before 10pm"],
+  "labels": ["renovate"],
+  "prHourlyLimit": 5,
+  "prConcurrentLimit": 10,
+  "dependencyDashboard": false,
+  "automerge": false,
+
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+
+  "packageRules": [
+    {
+      "groupName": "react",
+      "matchPackageNames": ["@types/react", "@types/react-dom"],
+      "matchPackagePrefixes": ["react"]
     },
-
-    "packageRules": [
-        {
-            "groupName": "react",
-            "matchPackageNames": ["@types/react", "@types/react-dom"],
-            "matchPackagePrefixes": ["react"]
-        },
-        {
-            "groupName": "eslint",
-            "matchPackageNames": ["@types/eslint", "babel-eslint"],
-            "matchPackagePrefixes": ["@typescript-eslint/", "eslint"]
-        },
-        {
-            "groupName": "tailwindcss",
-            "matchPackageNames": ["tailwindcss", "tailwindcss-animate","tailwind-merge"],
-            "matchPackagePrefixes": ["tailwindcss"]
-        },
-        {
-            "groupName": "radix-ui",
-            "matchPackagePrefixes": ["@radix-ui/"]
-        }
-    ]
-  }
+    {
+      "groupName": "eslint",
+      "matchPackageNames": ["@types/eslint", "babel-eslint"],
+      "matchPackagePrefixes": ["@typescript-eslint/", "eslint"]
+    },
+    {
+      "groupName": "tailwindcss",
+      "matchPackageNames": ["tailwindcss", "tailwindcss-animate", "tailwind-merge"],
+      "matchPackagePrefixes": ["tailwindcss"]
+    },
+    {
+      "groupName": "radix-ui",
+      "matchPackagePrefixes": ["@radix-ui/"]
+    }
+  ]
+}
