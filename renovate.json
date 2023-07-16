@@ -5,7 +5,7 @@
   "timezone": "Asia/Tokyo",
   "schedule": ["before 10pm"],
   "labels": ["renovate"],
-  "prHourlyLimit": 5,
+  "prHourlyLimit": 10,
   "prConcurrentLimit": 10,
   "dependencyDashboard": false,
   "automerge": false,
