@@ -8,13 +8,13 @@ export const Footer = () => {
               イベント
             </a>
             <a href="#" className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">
-              キャラクター
+              装飾
+            </a>
+            <a href="#" className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">
+              武器
             </a>
             <a href="#" className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">
               アリーナ
-            </a>
-            <a href="#" className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">
-              その他
             </a>
           </nav>
 

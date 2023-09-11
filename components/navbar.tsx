@@ -116,55 +116,13 @@ export const Navbar = () => {
                     className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
                     href={'/#'}
                   >
-                    武器&装飾
+                    武器
                   </Link>
                   <Link
                     className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
                     href={'/#'}
                   >
-                    武器&装飾
-                  </Link>
-                  <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
-                    href={'/#'}
-                  >
-                    武器&装飾
-                  </Link>
-                  <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
-                    href={'/#'}
-                  >
-                    武器&装飾
-                  </Link>
-                  <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
-                    href={'/#'}
-                  >
-                    武器&装飾
-                  </Link>
-                  <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
-                    href={'/#'}
-                  >
-                    武器&装飾
-                  </Link>
-                  <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
-                    href={'/#'}
-                  >
-                    武器&装飾
-                  </Link>
-                  <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
-                    href={'/#'}
-                  >
-                    武器&装飾
-                  </Link>
-                  <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
-                    href={'/#'}
-                  >
-                    武器&装飾
+                    装飾
                   </Link>
                 </li>
               </ul>
