@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { Navbar } from '@/components/navbar';
 import { ModeToggle } from '@/components/theme-mode';
 import { Button } from '@/components/ui/button';
-import { Search } from '@/components/ui/search';
+import { Searchicon } from '@/components/ui/search';
 
 export const Header = () => {
   return (
     <header className="sticky top-0 z-10 border-b bg-white dark:border-gray-800 dark:bg-gray-800">
       <div className="container max-w-7xl">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-14 items-center justify-between">
           <div className="flex items-center space-x-2">
             <Button variant="ghost" size="icon">
               <Link className="shrink-0" href="/">
@@ -42,12 +42,18 @@ export const Header = () => {
                 >
                   アリーナ
                 </Link>
+                <Link
+                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                  href="/about"
+                >
+                  About
+                </Link>
               </nav>
             </div>
           </div>
 
           <div className="flex">
-            <Search />
+            <Searchicon />
             <ModeToggle />
             <Button variant="ghost" size="icon">
               <Link href="http://localhost:3000">

@@ -32,37 +32,37 @@ export const Navbar = () => {
       </Button>
       {isOpen && (
         <RemoveScroll enabled={isMobileLayout && isOpen}>
-          <div className="fixed bottom-0 left-0 top-16 z-10 block h-screen w-full overflow-x-hidden bg-white dark:bg-gray-800">
+          <div className="fixed bottom-0 left-0 top-14 z-10 block w-full overflow-auto overflow-x-hidden bg-white dark:bg-gray-800">
             <div className="container">
               <ul className="flex flex-col px-2">
                 <li className="flex flex-col py-2">
                   <h4 className="text-2xl font-bold">ホーム</h4>
                   <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
+                    className="rounded-lg p-2 text-gray-900 transition-all duration-100 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
                     href={'/#'}
                   >
                     ホーム
                   </Link>
                   <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
+                    className="rounded-lg p-2 text-gray-900 transition-all duration-100 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
                     href={'/#'}
                   >
                     イベント
                   </Link>
                   <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
+                    className="rounded-lg p-2 text-gray-900 transition-all duration-100 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
                     href={'/#'}
                   >
                     ガチャ
                   </Link>
                   <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
+                    className="rounded-lg p-2 text-gray-900 transition-all duration-100 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
                     href={'/#'}
                   >
                     初心者
                   </Link>
                   <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
+                    className="rounded-lg p-2 text-gray-900 transition-all duration-100 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
                     href={'/#'}
                   >
                     その他
@@ -71,19 +71,19 @@ export const Navbar = () => {
                 <li className="flex flex-col py-2">
                   <h4 className="text-2xl font-bold">クエスト</h4>
                   <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
+                    className="rounded-lg p-2 text-gray-900 transition-all duration-100 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
                     href={'/#'}
                   >
                     アリーナ
                   </Link>
                   <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
+                    className="rounded-lg p-2 text-gray-900 transition-all duration-100 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
                     href={'/#'}
                   >
                     アリーナEX
                   </Link>
                   <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
+                    className="rounded-lg p-2 text-gray-900 transition-all duration-100 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
                     href={'/#'}
                   >
                     ダンジョン
@@ -92,19 +92,19 @@ export const Navbar = () => {
                 <li className="flex flex-col py-2">
                   <h4 className="text-2xl font-bold">育成</h4>
                   <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
+                    className="rounded-lg p-2 text-gray-900 transition-all duration-100 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
                     href={'/#'}
                   >
                     名声クエスト
                   </Link>
                   <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
+                    className="rounded-lg p-2 text-gray-900 transition-all duration-100 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
                     href={'/#'}
                   >
                     キャラクター
                   </Link>
                   <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
+                    className="rounded-lg p-2 text-gray-900 transition-all duration-100 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
                     href={'/#'}
                   >
                     アシスト
@@ -113,13 +113,13 @@ export const Navbar = () => {
                 <li className=" flex flex-col py-2">
                   <h4 className="text-2xl font-bold">鍛冶屋</h4>
                   <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
+                    className="rounded-lg p-2 text-gray-900 transition-all duration-100 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
                     href={'/#'}
                   >
                     武器
                   </Link>
                   <Link
-                    className="rounded-lg p-2 text-gray-900 transition-all duration-200 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
+                    className="rounded-lg p-2 text-gray-900 transition-all duration-100 hover:bg-blue-300 dark:text-slate-100 dark:hover:bg-blue-500"
                     href={'/#'}
                   >
                     装飾

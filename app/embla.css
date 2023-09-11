@@ -1,0 +1,9 @@
+.embla__dot--selected:after {
+  background: #0868c7;
+}
+
+@media (prefers-color-scheme: dark) {
+  .embla__dot--selected:after {
+    background: #80bcf8;
+  }
+}

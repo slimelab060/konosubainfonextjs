@@ -72,6 +72,9 @@
   * {
     @apply border-border;
   }
+  html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
   body {
     @apply bg-background text-foreground;
     font-feature-settings: 'rlig' 1, 'calt' 1;
