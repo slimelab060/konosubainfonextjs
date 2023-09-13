@@ -16,7 +16,7 @@ const notojp = Noto_Sans_JP({
 export const metadata = {
   title: {
     default: siteName,
-    template: `%s - ${siteName}`,
+    template: `${siteName} - %s`,
   },
   description,
   openGraph: {
