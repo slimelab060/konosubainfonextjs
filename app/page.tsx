@@ -17,7 +17,7 @@ export default function Home() {
         <div className="hidden lg:block">
           <SideMenu />
         </div>
-        <div className="p-4 lg:min-h-screen lg:rounded-lg lg:bg-white lg:shadow-sm lg:dark:bg-muted">
+        <div className="p-4 lg:min-h-screen lg:rounded-lg lg:border lg:bg-slate-800 lg:shadow-sm">
           <EmblaCarousel
             slides={SLIDES}
             options={{
@@ -32,6 +32,7 @@ export default function Home() {
               <TabsTrigger value="infosite">お知らせ</TabsTrigger>
             </TabsList>
             <TabsContent value="infomation">
+              <Testcolorvar />
               <Card>
                 <CardHeader>
                   <CardTitle>Card Title</CardTitle>
@@ -53,8 +54,6 @@ export default function Home() {
               </div>
             </TabsContent>
           </Tabs>
-
-          <Testcolorvar />
         </div>
       </div>
     </div>
