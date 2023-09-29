@@ -1,8 +1,8 @@
 export const Testcolorvar = () => {
   return (
     <>
-      <div className="my-4 rounded-lg bg-background p-4">カラーテスト (var)</div>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="my-4 rounded-lg bg-background p-4">カラーテスト</div>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
         <div className="rounded-lg bg-background p-4">background</div>
         <div className="rounded-lg bg-foreground p-4 text-card">foreground</div>
         <div className="rounded-lg bg-card p-4">card</div>
