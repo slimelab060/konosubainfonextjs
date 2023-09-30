@@ -17,7 +17,7 @@ export default function Home() {
         <div className="hidden lg:block">
           <SideMenu />
         </div>
-        <div className="p-4 lg:min-h-screen lg:rounded-lg lg:border lg:bg-slate-800 lg:shadow-sm">
+        <div className="p-4 lg:min-h-screen lg:rounded-lg lg:border lg:shadow-sm dark:lg:bg-slate-800">
           <EmblaCarousel
             slides={SLIDES}
             options={{
