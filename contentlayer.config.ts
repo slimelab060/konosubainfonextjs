@@ -4,21 +4,9 @@ import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 
-/** @type {import('contentlayer/source-files').ComputedFields} */
-const computedFields = {
-  slug: {
-    type: 'string',
-    resolve: (doc) => `/${doc._raw.flattenedPath}`,
-  },
-  slugAsParams: {
-    type: 'string',
-    resolve: (doc) => doc._raw.flattenedPath.split('/').slice(1).join('/'),
-  },
-};
-
 export const Post = defineDocumentType(() => ({
   name: 'Post',
-  filePathPattern: `**/*.mdx`,
+  filePathPattern: `other/**/*.mdx`,
   contentType: 'mdx',
   fields: {
     title: { type: 'string', description: 'タイトル', required: true },
@@ -26,7 +14,14 @@ export const Post = defineDocumentType(() => ({
     //tags: { type: 'list', of: { type: 'string' }, description: 'タグ', required: true },
   },
   computedFields: {
-    url: { type: 'string', resolve: (post) => `/content/${post._raw.flattenedPath}` },
+    url: {
+      type: 'string',
+      resolve: (post) => `${post._raw.flattenedPath}`,
+    },
+    slug: {
+      type: 'string',
+      resolve: (doc) => doc._raw.flattenedPath.replace(/^.+?(\/)/, ''),
+    },
   },
 }));
 

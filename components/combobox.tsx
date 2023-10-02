@@ -10,24 +10,108 @@ import { cn } from '@/lib/utils';
 
 const frameworks = [
   {
-    value: 'next.js',
-    label: 'Next.js',
+    value: 'カズマ',
+    label: 'カズマ',
   },
   {
-    value: 'sveltekit',
-    label: 'SvelteKit',
+    value: 'アクア',
+    label: 'アクア',
   },
   {
-    value: 'nuxt.js',
-    label: 'Nuxt.js',
+    value: 'めぐみん',
+    label: 'めぐみん',
   },
   {
-    value: 'remix',
-    label: 'Remix',
+    value: 'ダクネス',
+    label: 'ダクネス',
   },
   {
-    value: 'astro',
-    label: 'Astro',
+    value: 'クリス',
+    label: 'クリス',
+  },
+  {
+    value: 'ウィズ',
+    label: 'ウィズ',
+  },
+  {
+    value: 'ゆんゆん',
+    label: 'ゆんゆん',
+  },
+  {
+    value: 'アイリス',
+    label: 'アイリス',
+  },
+  {
+    value: 'セシリー',
+    label: 'セシリー',
+  },
+  {
+    value: 'あるえ',
+    label: 'あるえ',
+  },
+  {
+    value: 'ミツルギ',
+    label: 'ミツルギ',
+  },
+  {
+    value: 'ダスト',
+    label: 'ダスト',
+  },
+  {
+    value: 'リーン',
+    label: 'リーン',
+  },
+  {
+    value: 'リア',
+    label: 'リア',
+  },
+  {
+    value: 'シエロ',
+    label: 'シエロ',
+  },
+  {
+    value: 'エーリカ',
+    label: 'エーリカ',
+  },
+  {
+    value: 'メリッサ',
+    label: 'メリッサ',
+  },
+  {
+    value: 'ミーア',
+    label: 'ミーア',
+  },
+  {
+    value: 'エイミー',
+    label: 'エイミー',
+  },
+  {
+    value: 'こめっこ',
+    label: 'こめっこ',
+  },
+  {
+    value: 'メル',
+    label: 'メル',
+  },
+  {
+    value: 'バニル',
+    label: 'バニル',
+  },
+  {
+    value: 'ロリーサ',
+    label: 'ロリーサ',
+  },
+  {
+    value: 'クレア',
+    label: 'クレア',
+  },
+  {
+    value: 'ふにふら＆どどんこ',
+    label: 'ふにふら＆どどんこ',
+  },
+  {
+    value: 'ゼスタ',
+    label: 'ゼスタ',
   },
 ];
 
@@ -39,14 +123,14 @@ export function ComboboxDemo() {
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button variant="outline" role="combobox" aria-expanded={open} className="w-[200px] justify-between">
-          {value ? frameworks.find((framework) => framework.value === value)?.label : 'Select framework...'}
+          {value ? frameworks.find((framework) => framework.value === value)?.label : 'キャラクタ選択'}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[200px] p-0">
+      <PopoverContent className=" w-[200px] p-0">
         <Command>
-          <CommandInput placeholder="Search framework..." />
-          <CommandEmpty>No framework found.</CommandEmpty>
+          <CommandInput placeholder="キャラクタ検索..." />
+          <CommandEmpty>見つかりませんでした</CommandEmpty>
           <CommandGroup>
             {frameworks.map((framework) => (
               <CommandItem
