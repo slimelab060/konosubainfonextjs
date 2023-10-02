@@ -57,7 +57,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                     {index + 1} / {slides.length}
                   </span>
                 </div>
-                <div className="pointer-events-none absolute left-[0.6rem] top-[0.6rem] z-[1] h-[4.6rem] w-[7rem] rounded-[10%] bg-blue-500 text-center font-black leading-[4.6rem]">
+                <div className="pointer-events-none absolute left-[0.6rem] top-[0.6rem] z-[1] h-[4.6rem] w-[7rem] rounded-[5%] bg-blue-500 text-center font-black leading-[4.6rem]">
                   <span>ID_4357c21</span>
                 </div>
                 <Link href={'#' + index}>
