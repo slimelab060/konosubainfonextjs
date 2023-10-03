@@ -4,7 +4,7 @@ import TestSpreadOperator from '@/components/TestSpreadOperator';
 import { Testcolorvar } from '@/components/Testcolorvar';
 import EmblaCarousel from '@/components/carousel';
 import { ComboboxDemo } from '@/components/combobox';
-import { characterlist, characterkorabolist, elementlist } from '@/components/selectlist';
+import CountDownTimer from '@/components/countdowntimer';
 import { SideMenu } from '@/components/sidemenu';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import {
@@ -17,6 +17,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { characterlist, characterkorabolist, elementlist } from '@/data/selectlist';
 import { allPosts, Post } from 'contentlayer/generated';
 
 //<Image className="object-fill" src={test} alt="background-image" />
@@ -77,9 +78,11 @@ export default function Home() {
             <TabsList>
               <TabsTrigger value="infomation">最新情報</TabsTrigger>
               <TabsTrigger value="infosite">お知らせ</TabsTrigger>
+              <TabsTrigger value="timeline">タイムライン</TabsTrigger>
             </TabsList>
             <TabsContent value="infomation">
               <Testcolorvar />
+              <TestSpreadOperator />
             </TabsContent>
             <TabsContent value="infosite" className="">
               <span>ここにお知らせ</span>
@@ -139,6 +142,10 @@ export default function Home() {
                   <PostCard key={idx} {...post} />
                 ))}
               </div>
+            </TabsContent>
+            <TabsContent value="timeline">
+              タイムライン
+              <CountDownTimer />
             </TabsContent>
           </Tabs>
         </div>
