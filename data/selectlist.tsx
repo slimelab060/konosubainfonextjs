@@ -235,42 +235,42 @@ const elementlist: element[] = [
   {
     value: '火属性',
     label: '火属性',
-    color: 'bg-red-400',
+    color: '#ef4444',
   },
   {
     value: '水属性',
     label: '水属性',
-    color: 'bg-blue-400',
+    color: '#2563eb',
   },
   {
     value: '雷属性',
     label: '雷属性',
-    color: 'bg-yellow-400',
+    color: '#f59e0b',
   },
   {
     value: '地属性',
     label: '地属性',
-    color: 'bg-orange-400',
+    color: '#c2410c',
   },
   {
     value: '風属性',
     label: '風属性',
-    color: 'bg-green-400',
+    color: '#16a34a',
   },
   {
     value: '光属性',
     label: '光属性',
-    color: 'bg-slate-200',
+    color: '#cbd5e1',
   },
   {
     value: '闇属性',
     label: '闇属性',
-    color: 'bg-violet-400',
+    color: '#7c3aed',
   },
   {
     value: '無属性',
     label: '無属性',
-    color: 'bg-slate-400',
+    color: '#475569',
   },
 ];
 

@@ -5,7 +5,7 @@ import { ScrollArea } from './ui/scroll-area';
 export const SideMenu = () => {
   return (
     <div className="fixed bottom-0 left-0 top-14 z-[5] w-full lg:sticky lg:left-auto lg:top-[4.55rem] lg:max-h-[calc(100vh-64px)]">
-      <ScrollArea className="h-full w-full overflow-x-hidden bg-background p-2 dark:bg-slate-800 lg:h-[calc(100vh-64px)] lg:rounded-lg lg:border lg:shadow-sm">
+      <ScrollArea className="h-full w-full overflow-x-hidden bg-background p-2 dark:bg-slate-800 lg:h-[calc(100vh-64px)] lg:rounded-lg  lg:shadow-sm">
         <ul className="p-2">
           <li className="flex flex-col py-2">
             <h4 className="pb-2 text-xl font-bold">クイックメニュー</h4>

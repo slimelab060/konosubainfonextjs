@@ -20,7 +20,7 @@ export const PrevButton: React.FC<PropType> = (props) => {
 
   return (
     <button
-      className="z-[1] m-0 hidden h-12 w-12 cursor-pointer touch-manipulation items-center justify-center rounded-lg bg-background text-primary no-underline shadow-sm disabled:opacity-30 md:flex"
+      className="z-[1] m-0 hidden h-12 w-12 cursor-pointer touch-manipulation items-center justify-center rounded-lg bg-background text-foreground no-underline shadow-sm disabled:opacity-30 md:flex"
       type="button"
       {...restProps}
     >
@@ -36,7 +36,7 @@ export const NextButton: React.FC<PropType> = (props) => {
 
   return (
     <button
-      className="z-[1] m-0 hidden h-12 w-12 cursor-pointer touch-manipulation items-center justify-center rounded-lg bg-background text-primary no-underline shadow-sm disabled:opacity-30 md:flex"
+      className="z-[1] m-0 hidden h-12 w-12 cursor-pointer touch-manipulation items-center justify-center rounded-lg bg-background text-foreground no-underline shadow-sm disabled:opacity-30 md:flex"
       type="button"
       {...restProps}
     >

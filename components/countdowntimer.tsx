@@ -1,17 +1,16 @@
 'use client';
+
 import { format, formatDuration, intervalToDuration, isBefore } from 'date-fns';
 import { ja } from 'date-fns/locale';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { eventtimeline, timelinelist } from '@/data/timeline';
 
-interface TimerProps {
-  startdate: Date;
-}
-
-const Timer: React.FC<TimerProps> = ({ startdate }) => {
+const Timer = (items: timelinelist) => {
   //const endOfToday = endOfDay(now);
-  const endDate = startdate;
-  const [countdown, setCountdown] = useState('');
+  const endDate = items.end;
+  const [countdown, setCountdown] = useState(format(endDate, 'MM-dd HH:mm'));
   const [countdownEnded, setCountdownEnded] = useState(false);
 
   useEffect(() => {
@@ -23,7 +22,13 @@ const Timer: React.FC<TimerProps> = ({ startdate }) => {
         setCountdownEnded(true);
         clearInterval(interval);
       } else {
-        setCountdown(`${formatDuration(duration, { locale: ja })}`);
+        setCountdown(
+          `${formatDuration(duration, {
+            locale: ja,
+            format: ['weeks', 'days', 'hours', 'minutes'],
+            zero: true,
+          })}`
+        );
       }
     }, 1000);
 
@@ -32,16 +37,25 @@ const Timer: React.FC<TimerProps> = ({ startdate }) => {
 
   return (
     <div className="rounded-lg">
-      <Card className=" rounded-lg bg-[url('/carousel/EER.jpg')] bg-cover">
-        <CardHeader>
-          <CardTitle>カウントダウン</CardTitle>
-          <CardDescription>{endDate && <h3>期限: {format(endDate, 'yyyy-MM-dd HH:mm')}</h3>}</CardDescription>
-        </CardHeader>
-        <CardContent>
-          {!countdownEnded && <h4>残り時間: {countdown}</h4>}
-          {countdownEnded && <h4>終了</h4>}
-        </CardContent>
-      </Card>
+      <Link href={items.url}>
+        <Card
+          className="bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `linear-gradient(90deg, rgba(15,23,42,0.9) 0%, rgba(0, 0, 0, 0.0) 100%), url('${items.image}')`,
+          }}
+        >
+          <CardHeader>
+            <CardTitle className="text-white">{items.title}</CardTitle>
+            <CardDescription className="text-white">
+              {endDate && <h3>期限: {format(endDate, 'yyyy/MM/dd HH:mm')}</h3>}
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="text-white">
+            {!countdownEnded && <h4>残り時間: {countdown}</h4>}
+            {countdownEnded && <h4>このイベントは終了しました</h4>}
+          </CardContent>
+        </Card>
+      </Link>
     </div>
   );
 };
@@ -49,7 +63,9 @@ const Timer: React.FC<TimerProps> = ({ startdate }) => {
 export default function CountDownTimer() {
   return (
     <div className="mt-4 grid grid-cols-1 gap-4 text-2xl">
-      <Timer startdate={new Date(2023, 9, 10, 21, 59)} />
+      {eventtimeline.map((items, i) => (
+        <Timer key={i} {...items} />
+      ))}
     </div>
   );
 }
