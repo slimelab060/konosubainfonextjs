@@ -1,10 +1,13 @@
 import { compareDesc, format, parseISO } from 'date-fns';
+import split from 'just-split';
 import { Calendar } from 'lucide-react';
 import Link from 'next/link';
+import CharacterCard from '@/app/(character)/character/page';
 import { TestSpreadOperator } from '@/components/TestSpreadOperator';
 import { Testcolorvar } from '@/components/Testcolorvar';
 import EmblaCarousel from '@/components/carousel';
 import CountDownTimer from '@/components/countdowntimer';
+import { Pagination } from '@/components/pagination';
 import { SideMenu } from '@/components/sidemenu';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { MultiSelect } from '@/components/ui/multi-select';
@@ -19,11 +22,27 @@ import {
 } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { characterlist, characterkorabolist, elementlist } from '@/data/selectlist';
+
 import { allPosts, Post } from 'contentlayer/generated';
 
 //<Image className="object-fill" src={test} alt="background-image" />
 const SLIDE_COUNT = 5;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
+const getCorrectPage = ({ page, max }: { page: string | number | undefined; max: number }) => {
+  let _page = Number(page);
+  if (page === undefined || !Number.isInteger(_page) || _page > max || _page <= 0) {
+    return 1;
+  } else {
+    return _page;
+  }
+};
+
+interface PageProps {
+  searchParams: { page: number };
+}
+
+const PER_PAGE = 10;
 
 function PostCard(post: Post) {
   return (
@@ -57,8 +76,17 @@ function PostCard(post: Post) {
   );
 }
 
-export default function Home() {
-  const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
+export default function Home({ searchParams }: PageProps) {
+  const sorts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
+  const splits = split(sorts, PER_PAGE);
+  let { page } = searchParams;
+  page = getCorrectPage({ page, max: splits.length });
+  const posts = splits[page - 1];
+  const initialDisplayPosts = posts.slice(0, PER_PAGE);
+  const pagination = {
+    currentPage: 1,
+    totalPages: Math.ceil(posts.length / PER_PAGE),
+  };
 
   return (
     <div className="min-h-screen bg-slate-200 dark:bg-slate-900">
@@ -141,11 +169,18 @@ export default function Home() {
                 <MultiSelect />
               </div>
 
+              <h1 className="mt-8 text-2xl font-black">コンテンツテスト</h1>
+              <div>{splits.length > 1 ? <Pagination href="/" max={splits.length} page={page} /> : ''}</div>
               <div className="my-4 grid flex-1 gap-4 text-center text-2xl md:grid-cols-2 lg:grid-cols-4">
-                {posts.map((post, idx) => (
-                  <PostCard key={idx} {...post} />
-                ))}
+                {posts
+                  .filter((post) => post.draft === false)
+                  .map((post, idx) => (
+                    <PostCard key={idx} {...post} />
+                  ))}
               </div>
+              <div>{splits.length > 1 ? <Pagination href="/" max={splits.length} page={page} /> : ''}</div>
+
+              <CharacterCard />
             </TabsContent>
             <TabsContent value="timeline" className="my-8 ">
               <div className="flex flex-1">

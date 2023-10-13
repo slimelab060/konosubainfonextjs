@@ -1,5 +1,4 @@
 import { format, parseISO } from 'date-fns';
-import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import { allPosts } from 'contentlayer/generated';

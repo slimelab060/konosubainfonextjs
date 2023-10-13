@@ -316,4 +316,298 @@ const raritylist: list[] = [
   },
 ];
 
-export { characterlist, characterkorabolist, elementlist, menulist, raritylist };
+const costumelist: list[] = [
+  {
+    value: 'リゼロ',
+    label: 'リゼロ',
+  },
+  {
+    value: 'ダンまち',
+    label: 'ダンまち',
+  },
+  {
+    value: 'オーバーロード',
+    label: 'オーバーロード',
+  },
+  {
+    value: '超電磁砲',
+    label: '超電磁砲',
+  },
+  {
+    value: '盾の勇者',
+    label: '盾の勇者',
+  },
+  {
+    value: '防振り',
+    label: '防振り',
+  },
+  {
+    value: '無職転生',
+    label: '無職転生',
+  },
+  {
+    value: 'SOS団',
+    label: 'SOS団',
+  },
+  {
+    value: 'タオル',
+    label: 'タオル',
+  },
+  {
+    value: '冬服',
+    label: '冬服',
+  },
+  {
+    value: 'パジャマ',
+    label: 'パジャマ',
+  },
+  {
+    value: 'カジノ',
+    label: 'カジノ',
+  },
+  {
+    value: '演劇',
+    label: '演劇',
+  },
+  {
+    value: 'メイド',
+    label: 'メイド',
+  },
+  {
+    value: '紅伝説',
+    label: '紅伝説',
+  },
+  {
+    value: 'ステージ',
+    label: 'ステージ',
+  },
+  {
+    value: '舞踏会',
+    label: '舞踏会',
+  },
+  {
+    value: '水着',
+    label: '水着',
+  },
+  {
+    value: 'オアシス',
+    label: 'オアシス',
+  },
+  {
+    value: 'ウェイトレス',
+    label: 'ウェイトレス',
+  },
+  {
+    value: '忍者',
+    label: '忍者',
+  },
+  {
+    value: 'ハロウィン',
+    label: 'ハロウィン',
+  },
+  {
+    value: '拳法',
+    label: '拳法',
+  },
+  {
+    value: 'クリスマス',
+    label: 'クリスマス',
+  },
+  {
+    value: '振袖',
+    label: '振袖',
+  },
+  {
+    value: 'バレンタイン',
+    label: 'バレンタイン',
+  },
+  {
+    value: '伝説の冒険者',
+    label: '伝説の冒険者',
+  },
+  {
+    value: '学生服',
+    label: '学生服',
+  },
+  {
+    value: 'サムイドー',
+    label: 'サムイドー',
+  },
+  {
+    value: '浴衣',
+    label: '浴衣',
+  },
+  {
+    value: '私服',
+    label: '私服',
+  },
+  {
+    value: '謎の腕利き冒険者',
+    label: '謎の腕利き冒険者',
+  },
+  {
+    value: 'ラッパー',
+    label: 'ラッパー',
+  },
+  {
+    value: '禁断の冒険者',
+    label: '禁断の冒険者',
+  },
+  {
+    value: 'リアルTOKYO',
+    label: 'リアルTOKYO',
+  },
+  {
+    value: 'レッドプリズン',
+    label: 'レッドプリズン',
+  },
+  {
+    value: '探偵団',
+    label: '探偵団',
+  },
+  {
+    value: '猫耳巫女',
+    label: '猫耳巫女',
+  },
+  {
+    value: '幻想の冒険者',
+    label: '幻想の冒険者',
+  },
+  {
+    value: '運動会',
+    label: '運動会',
+  },
+  {
+    value: '天使隊',
+    label: '天使隊',
+  },
+];
+
+const traitlist: list[] = [
+  {
+    value: '火属性攻撃アップ',
+    label: '火属性攻撃アップ',
+  },
+  {
+    value: '水属性攻撃アップ',
+    label: '水属性攻撃アップ',
+  },
+  {
+    value: '雷属性攻撃アップ',
+    label: '雷属性攻撃アップ',
+  },
+  {
+    value: '地属性攻撃アップ',
+    label: '地属性攻撃アップ',
+  },
+  {
+    value: '風属性攻撃アップ',
+    label: '風属性攻撃アップ',
+  },
+  {
+    value: '光属性攻撃アップ',
+    label: '光属性攻撃アップ',
+  },
+  {
+    value: '闇属性攻撃アップ',
+    label: '闇属性攻撃アップ',
+  },
+  {
+    value: '無属性攻撃アップ',
+    label: '無属性攻撃アップ',
+  },
+  {
+    value: '物理攻撃アップ',
+    label: '物理攻撃アップ',
+  },
+  {
+    value: '魔法攻撃アップ',
+    label: '魔法攻撃アップ',
+  },
+  {
+    value: '毒体制アップ',
+    label: '毒体制アップ',
+  },
+  {
+    value: '暗闇耐性アップ',
+    label: '暗闇耐性アップ',
+  },
+  {
+    value: '封印耐性アップ',
+    label: '封印耐性アップ',
+  },
+  {
+    value: 'バインド耐性アップ',
+    label: 'バインド耐性アップ',
+  },
+  {
+    value: '行動ごとに回復',
+    label: '行動ごとに回復',
+  },
+  {
+    value: 'ダメージ吸収',
+    label: 'ダメージ吸収',
+  },
+  {
+    value: '必殺ゲージ上昇アップ',
+    label: '必殺ゲージ上昇アップ',
+  },
+  {
+    value: 'バインド耐性アップ',
+    label: 'バインド耐性アップ',
+  },
+  {
+    value: '物理ダメージ軽減',
+    label: '物理ダメージ軽減',
+  },
+  {
+    value: '魔法ダメージ軽減',
+    label: '魔法ダメージ軽減',
+  },
+  {
+    value: 'デバフ時物攻アップ',
+    label: 'デバフ時物攻アップ',
+  },
+  {
+    value: 'デバフ時魔攻アップ',
+    label: 'デバフ時魔攻アップ',
+  },
+  {
+    value: '高HP時物攻アップ',
+    label: '高HP時物攻アップ',
+  },
+  {
+    value: '高HP時魔攻アップ',
+    label: '高HP時魔攻アップ',
+  },
+  {
+    value: 'デバフ時闇功アップ',
+    label: 'デバフ時闇功アップ',
+  },
+  {
+    value: '高HP時水攻アップ',
+    label: '高HP時水攻アップ',
+  },
+  {
+    value: '高HP時地攻アップ',
+    label: '高HP時地攻アップ',
+  },
+  {
+    value: '高HP時風攻アップ',
+    label: '高HP時風攻アップ',
+  },
+  {
+    value: '高HP時魔攻アップ',
+    label: '高HP時魔攻アップ',
+  },
+  {
+    value: '高HP時光攻アップ',
+    label: '高HP時光攻アップ',
+  },
+  {
+    value: '必殺時攻撃アップ',
+    label: '必殺時攻撃アップ',
+  },
+];
+
+export { characterlist, characterkorabolist, costumelist, elementlist, menulist, raritylist, traitlist };

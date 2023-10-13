@@ -19,7 +19,7 @@ export const Header = () => {
             <div className="hidden md:block">
               <nav className="flex space-x-4"></nav>
             </div>
-            <div className="text-sm font-bold ">dev 0.4-C9 1006</div>
+            <div className="text-sm font-bold ">dev 0.4-C10 1010</div>
           </div>
 
           <div className="flex">
