@@ -1,5 +1,6 @@
-import { compareDesc, format, parseISO } from 'date-fns';
+import { compareDesc } from 'date-fns';
 import Link from 'next/link';
+import { badgeVariants } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { allCharacters, Character } from 'contentlayer/generated';
 
@@ -25,10 +26,9 @@ function CharacterCard(post: Character) {
         </CardHeader>
         <CardContent>{'＞︿＜'}</CardContent>
         <CardFooter>
-          {' '}
-          <time dateTime={post.date} className="mb-2 block text-sm text-gray-600">
-            {format(parseISO(post.date), 'yyyy-MM-dd')}
-          </time>
+          <Link className={badgeVariants({ variant: 'outline' })} href={''}>
+            {post.tags}
+          </Link>
         </CardFooter>
       </Card>
     </div>
@@ -37,7 +37,6 @@ function CharacterCard(post: Character) {
 
 export default function Home() {
   const posts = allCharacters.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
-
   return (
     <>
       {' '}

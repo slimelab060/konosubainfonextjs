@@ -18,7 +18,7 @@ interface PageProps {
   searchParams: { page: number };
 }
 
-const PER_PAGE = 10;
+const PER_PAGE = 5;
 
 function PostCard(post: Post) {
   return (
@@ -57,7 +57,6 @@ export default function Home({ searchParams }: PageProps) {
   const splits = split(sorts, PER_PAGE);
   let { page } = searchParams;
   page = getCorrectPage({ page, max: splits.length });
-  console.log(page);
   const posts = splits[page - 1];
   const initialDisplayPosts = posts.slice(0, PER_PAGE);
   const pagination = {
@@ -66,8 +65,8 @@ export default function Home({ searchParams }: PageProps) {
   };
   return (
     <>
-      {' '}
       <h1 className="mt-8 text-2xl font-black">コンテンツテスト</h1>
+      <div>{splits.length > 1 ? <Pagination href="/" max={splits.length} page={page} /> : ''}</div>
       <div className="my-4 grid flex-1 gap-4 text-center text-2xl md:grid-cols-2 lg:grid-cols-4">
         {posts
           .filter((post) => post.draft === false)
@@ -75,7 +74,7 @@ export default function Home({ searchParams }: PageProps) {
             <PostCard key={idx} {...post} />
           ))}
       </div>
-      <div>{splits.length > 1 ? <Pagination href="/other" max={splits.length} page={page} /> : ''}</div>
+      <div>{splits.length > 1 ? <Pagination href="/" max={splits.length} page={page} /> : ''}</div>
     </>
   );
 }
