@@ -7,7 +7,7 @@ import { Searchicon } from '@/components/ui/search';
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-10 border-b bg-white dark:border-gray-800 dark:bg-muted">
+    <header className="sticky top-0 z-10 border-b bg-card">
       <div className="container max-w-7xl">
         <div className="flex h-14 items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -19,7 +19,7 @@ export const Header = () => {
             <div className="hidden md:block">
               <nav className="flex space-x-4"></nav>
             </div>
-            <div className="text-sm font-bold ">dev 0.5 1014</div>
+            <div className="text-sm font-bold ">dev 0.5-C3 1020</div>
           </div>
 
           <div className="flex">

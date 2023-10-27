@@ -6,12 +6,10 @@ import { cn } from '@/lib/utils';
 export const Pagination = ({ href, page, max }: { href: string; page: number; max: number }) => {
   let arr: number[] = [];
   if (max <= 5) {
-    console.log(max, '<', 5);
     arr = [...Array(max)].map((_, i) => i + 1);
   } else {
     if (page <= 3) {
       arr = [1, 2, 3, 4, 5];
-      console.log(page, '<=', 3);
     } else if (page >= max - 2) {
       arr = [max - 4, max - 3, max - 2, max - 1, max];
     } else {
@@ -19,7 +17,7 @@ export const Pagination = ({ href, page, max }: { href: string; page: number; ma
     }
   }
   return (
-    <div className="flex w-[100%] flex-wrap justify-center pt-8 sm:justify-center">
+    <div className="flex w-[100%] flex-wrap justify-center py-2 sm:justify-center">
       {page > 1 ? (
         <Button
           variant="outline"
