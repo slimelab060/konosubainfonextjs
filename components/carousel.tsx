@@ -52,14 +52,23 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           <div className=" flex touch-pan-y ">
             {slides.map((index) => (
               <div className="relative mr-2 min-w-0 flex-[0_0_100%]" key={index}>
-                <div className="pointer-events-none absolute right-[0.6rem] top-[0.6rem] z-[1] h-[4.6rem] w-[4.6rem] rounded-[10%] bg-destructive text-center font-black leading-[4.6rem]">
+                <div className="pointer-events-none absolute right-[0.6rem] top-[0.6rem] z-[1] h-[4.6rem] w-[4.6rem] rounded-md bg-destructive text-center font-black leading-[4.6rem]">
                   <span>
                     {index + 1} / {slides.length}
                   </span>
                 </div>
+                <div
+                  className="pointer-events-none  absolute z-[1] h-full w-full rounded-md text-left font-black leading-[4.6rem]"
+                  style={{
+                    backgroundImage: `linear-gradient(90deg, rgba(15,23,42,0.8) 0%, rgba(0, 0, 0, 0.0) 80%) `,
+                  }}
+                >
+                  <span className="ml-4 text-white"> ID_C1d85a12</span>
+                </div>
+
                 <Link href={'#' + index}>
                   <Image
-                    className="block w-full rounded-lg object-cover"
+                    className="block w-full rounded-lg bg-cover bg-center bg-no-repeat object-cover"
                     src={imageIndex(index)}
                     alt="carousel_image"
                     width={1500}

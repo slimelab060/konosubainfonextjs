@@ -3,7 +3,7 @@ import { format, parseISO } from 'date-fns';
 import { notFound } from 'next/navigation';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import { SideMenu } from '@/components/sidemenu';
-import Toc from '@/components/toc';
+import { Toc } from '@/components/toc';
 import { allCharacters } from 'contentlayer/generated';
 
 export const generateStaticParams = async () => allCharacters.map((post) => ({ slug: post._raw.flattenedPath }));
@@ -23,7 +23,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   if (!post) notFound();
   const MDXContent = useMDXComponent(post.body.code);
   return (
-    <article className="min-h-screen bg-slate-200 dark:bg-slate-900 ">
+    <article className="min-h-screen dark:bg-slate-800 lg:bg-slate-200 lg:dark:bg-slate-900">
       <div className="container mx-auto  max-w-7xl flex-1 lg:grid lg:auto-cols-[200px_1fr] lg:grid-flow-col lg:gap-x-4">
         <div className="hidden lg:block">
           <SideMenu />

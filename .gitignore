@@ -21,6 +21,7 @@
 
 #imagetest
 /public/carousel
+/public/icon
 
 # debug
 npm-debug.log*
