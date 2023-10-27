@@ -4,7 +4,7 @@
 import { useEffect } from 'react';
 import tocbot from 'tocbot';
 
-export default function Toc(): React.ReactElement {
+export const Toc = () => {
   useEffect(() => {
     tocbot.init({
       tocSelector: '.toc', //auto-tocクラスの子要素としてTable Of Contentsを作成する
@@ -21,7 +21,7 @@ export default function Toc(): React.ReactElement {
   }, []);
 
   return (
-    <div className="bg-white p-4 dark:bg-slate-800 lg:fixed lg:my-4  lg:rounded-lg lg:shadow-sm">
+    <div className=" bottom-0 left-0 top-14 z-[5] w-full bg-background p-4 dark:bg-slate-800 lg:sticky lg:left-auto lg:top-[4.55rem] lg:my-4  lg:rounded-lg lg:shadow-sm">
       <span>目次</span>
       <div className="toc" />
       <style jsx global>{`
@@ -89,4 +89,4 @@ export default function Toc(): React.ReactElement {
       `}</style>
     </div>
   );
-}
+};

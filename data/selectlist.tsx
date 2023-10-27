@@ -1,12 +1,33 @@
+import Dark from '../public/icon/element/DarkIndi.webp';
+import Earth from '../public/icon/element/EarthIndi.webp';
+import Fire from '../public/icon/element/FireIndi.webp';
+import Light from '../public/icon/element/LightIndi.webp';
+import Thunder from '../public/icon/element/ThunderIndi.webp';
+import Water from '../public/icon/element/WaterIndi.webp';
+import Wind from '../public/icon/element/WindIndi.webp';
+import Non from '../public/icon/element/non-attribute.webp';
+import Accessory from '../public/icon/weapon/accessory.webp';
+import Cane from '../public/icon/weapon/cane.webp';
+import Daga from '../public/icon/weapon/daga.webp';
+import Spear from '../public/icon/weapon/spear.webp';
+import Stick from '../public/icon/weapon/stick.webp';
+import Sword from '../public/icon/weapon/sword.webp';
+
 type list = {
   value: string;
   label: string;
+};
+type listicon = {
+  value: string;
+  label: string;
+  image: string;
 };
 
 type element = {
   value: string;
   label: string;
   color: string;
+  image: string;
 };
 
 const characterlist: list[] = [
@@ -236,41 +257,82 @@ const elementlist: element[] = [
     value: '火属性',
     label: '火属性',
     color: '#ef4444',
+    image: Fire.src,
   },
   {
     value: '水属性',
     label: '水属性',
     color: '#2563eb',
+    image: Water.src,
   },
   {
     value: '雷属性',
     label: '雷属性',
     color: '#f59e0b',
+    image: Thunder.src,
   },
   {
     value: '地属性',
     label: '地属性',
     color: '#c2410c',
+    image: Earth.src,
   },
   {
     value: '風属性',
     label: '風属性',
     color: '#16a34a',
+    image: Wind.src,
   },
   {
     value: '光属性',
     label: '光属性',
     color: '#cbd5e1',
+    image: Light.src,
   },
   {
     value: '闇属性',
     label: '闇属性',
     color: '#7c3aed',
+    image: Dark.src,
   },
   {
     value: '無属性',
     label: '無属性',
     color: '#475569',
+    image: Non.src,
+  },
+];
+
+const weaponlist: listicon[] = [
+  {
+    value: '剣',
+    label: '剣',
+    image: Sword.src,
+  },
+  {
+    value: '短剣',
+    label: '短剣',
+    image: Daga.src,
+  },
+  {
+    value: '杖',
+    label: '杖',
+    image: Cane.src,
+  },
+  {
+    value: 'ステッキ',
+    label: 'ステッキ',
+    image: Stick.src,
+  },
+  {
+    value: '槍',
+    label: '槍',
+    image: Spear.src,
+  },
+  {
+    value: '装飾',
+    label: '装飾',
+    image: Accessory.src,
   },
 ];
 
@@ -610,4 +672,4 @@ const traitlist: list[] = [
   },
 ];
 
-export { characterlist, characterkorabolist, costumelist, elementlist, menulist, raritylist, traitlist };
+export { characterlist, characterkorabolist, costumelist, elementlist, menulist, raritylist, traitlist, weaponlist };
