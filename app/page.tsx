@@ -2,7 +2,6 @@ import { Label } from '@radix-ui/react-dropdown-menu';
 import { Calendar } from 'lucide-react';
 
 import Image from 'next/image';
-import CharacterCard from '@/app/(character)/character/page';
 import { TestSpreadOperator } from '@/components/TestSpreadOperator';
 import { Testcolorvar } from '@/components/Testcolorvar';
 import EmblaCarousel from '@/components/carousel';
@@ -31,7 +30,7 @@ import {
   characterkorabolist,
 } from '@/data/selectlist';
 
-const SLIDE_COUNT = 6;
+const SLIDE_COUNT = 5;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 interface PageProps {
@@ -195,7 +194,6 @@ export default function Home({ searchParams }: PageProps) {
                   <MultiSelect />
                 </div>
               </div>
-              <CharacterCard searchParams={searchParams} />
             </TabsContent>
             <TabsContent value="timeline" className="my-8 ">
               <div className="flex flex-1">

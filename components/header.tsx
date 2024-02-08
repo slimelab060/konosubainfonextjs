@@ -13,13 +13,13 @@ export const Header = () => {
           <div className="flex items-center space-x-2">
             <Button variant="ghost" size="icon">
               <Link className="shrink-0" href="/">
-                <Image className="h-6 w-6" src="/icon.svg" alt="chomusuke-icon" width={32} height={32} />
+                <Image className="size-6" src="/icon.svg" alt="chomusuke-icon" width={32} height={32} />
               </Link>
             </Button>
             <div className="hidden md:block">
               <nav className="flex space-x-4"></nav>
             </div>
-            <div className="text-sm font-bold ">dev 0.5-C3 1020</div>
+            <div className="text-sm font-bold ">dev 0.6 0208</div>
           </div>
 
           <div className="flex">

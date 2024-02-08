@@ -1,11 +1,11 @@
 {
   "typescript.format.enable": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
-    "[markdown]": {
+  "[markdown]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll.markdownlint": true
+      "source.fixAll.markdownlint": "explicit"
     }
   },
 
