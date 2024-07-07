@@ -1,7 +1,8 @@
 /* eslint-disable import/named */
 'use client';
 
-import useEmblaCarousel, { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel-react';
+import { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel';
+import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useEffect, useCallback } from 'react';
@@ -52,25 +53,24 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           <div className=" flex touch-pan-y ">
             {slides.map((index) => (
               <div className="relative mr-2 min-w-0 flex-[0_0_100%]" key={index}>
-                <div className="pointer-events-none absolute right-[0.6rem] top-[0.6rem] z-[1] h-[4.6rem] w-[4.6rem] rounded-md bg-destructive text-center font-black leading-[4.6rem]">
+                <div className="pointer-events-none absolute right-[0.6rem] top-[0.6rem] z-[1] size-[4.6rem] rounded-md bg-destructive text-center font-black leading-[4.6rem]">
                   <span>
                     {index + 1} / {slides.length}
                   </span>
                 </div>
                 <div
-                  className="pointer-events-none  absolute z-[1] h-full w-full rounded-md text-left font-black leading-[4.6rem]"
+                  className="pointer-events-none  absolute z-[1] size-full rounded-md text-left font-black leading-[4.6rem]"
                   style={{
                     backgroundImage: `linear-gradient(90deg, rgba(15,23,42,0.8) 0%, rgba(0, 0, 0, 0.0) 80%) `,
                   }}
-                >
-                  <span className="ml-4 text-white"> ID_C1d85a12</span>
-                </div>
+                ></div>
 
                 <Link href={'#' + index}>
                   <Image
                     className="block w-full rounded-lg bg-cover bg-center bg-no-repeat object-cover"
                     src={imageIndex(index)}
                     alt="carousel_image"
+                    quality={50}
                     width={1500}
                     height={500}
                   />
@@ -80,7 +80,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           </div>
         </div>
 
-        <div className="absolute bottom-[-0.6rem] left-[1rem] flex -translate-y-2/4 gap-1">
+        <div className="absolute bottom-[-0.6rem] left-4 flex -translate-y-2/4 gap-1">
           <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
           <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
         </div>
@@ -93,8 +93,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             onClick={() => scrollTo(index)}
             className={
               index === selectedIndex
-                ? 'm-0 mx-3 inline-flex h-[1.8rem] w-[1.8rem] cursor-pointer touch-manipulation items-center border-0 bg-transparent p-0 no-underline after:h-[0.4rem] after:w-full after:rounded-[0.2rem] after:bg-primary after:content-[""] dark:after:bg-primary md:h-[2.4rem] md:w-[2.4rem]'
-                : 'm-0 mx-3 inline-flex h-[1.8rem] w-[1.8rem] cursor-pointer touch-manipulation items-center border-0 bg-transparent p-0 no-underline after:h-[0.4rem] after:w-full after:rounded-[0.2rem] after:bg-muted-foreground after:content-[""] dark:after:bg-muted-foreground md:h-[2.4rem] md:w-[2.4rem]'
+                ? 'm-0 mx-3 inline-flex size-[1.8rem] cursor-pointer touch-manipulation items-center border-0 bg-transparent p-0 no-underline after:h-[0.4rem] after:w-full after:rounded-[0.2rem] after:bg-primary after:content-[""] dark:after:bg-primary md:size-[2.4rem]'
+                : 'm-0 mx-3 inline-flex size-[1.8rem] cursor-pointer touch-manipulation items-center border-0 bg-transparent p-0 no-underline after:h-[0.4rem] after:w-full after:rounded-[0.2rem] after:bg-muted-foreground after:content-[""] dark:after:bg-muted-foreground md:size-[2.4rem]'
             }
           />
         ))}

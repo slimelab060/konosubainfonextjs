@@ -25,7 +25,7 @@ export const Footer = () => {
               className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
             >
               <svg
-                className="h-5 w-5"
+                className="size-5"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -42,7 +42,7 @@ export const Footer = () => {
               className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
             >
               <svg
-                className="h-5 w-5"
+                className="size-5"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -59,7 +59,7 @@ export const Footer = () => {
               className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
             >
               <svg
-                className="h-5 w-5"
+                className="size-5"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -72,7 +72,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="py-6 text-center text-sm text-gray-400">&#169; 2023 Creeper060, Hanikamu</div>
+        <div className="py-6 text-center text-sm text-gray-400">&#169; 2024 Creeper060, Hanikamu</div>
       </footer>
     </div>
   );

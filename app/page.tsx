@@ -1,11 +1,12 @@
-import { Label } from '@radix-ui/react-dropdown-menu';
+import { promises as fs } from 'fs';
 import { Calendar } from 'lucide-react';
-
 import Image from 'next/image';
+import Testimg from '../public/carousel/24021.jpg';
 import { TestSpreadOperator } from '@/components/TestSpreadOperator';
 import { Testcolorvar } from '@/components/Testcolorvar';
 import EmblaCarousel from '@/components/carousel';
 import CountDownTimer from '@/components/countdowntimer';
+import { Newsinfo } from '@/components/newsinfo';
 import { SideMenu } from '@/components/sidemenu';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { MultiSelect } from '@/components/ui/multi-select';
@@ -37,7 +38,9 @@ interface PageProps {
   searchParams: { page: number };
 }
 
-export default function Home({ searchParams }: PageProps) {
+export default async function Home({ searchParams }: PageProps) {
+  const file = await fs.readFile(process.cwd() + '/app/api/character/Characterlist.json', 'utf8');
+  const data = JSON.parse(file);
   return (
     <div className="min-h-screen bg-secondary">
       <div className="mx-auto max-w-7xl flex-1 lg:container lg:grid lg:auto-cols-[200px_1fr] lg:grid-flow-col lg:gap-x-4">
@@ -53,6 +56,13 @@ export default function Home({ searchParams }: PageProps) {
               inViewThreshold: 0,
             }}
           />
+          <h1 className="pb-2 text-2xl font-bold">最新情報</h1>
+          <div className=" my-4 gap-4 md:grid md:grid-cols-1 lg:grid-cols-2">
+            <Newsinfo title="タイトル名" description="ここに説明文" url="#" imagepath={Testimg.src} />
+            <Newsinfo title="タイトル名" description="ここに説明文" url="#" imagepath={Testimg.src} />
+            <Newsinfo title="タイトル名" description="ここに説明文" url="#" imagepath={Testimg.src} />
+            <Newsinfo title="タイトル名" description="ここに説明文" url="#" imagepath={Testimg.src} />
+          </div>
           <Tabs defaultValue="infomation" className="w-full">
             <TabsList>
               <TabsTrigger value="infomation">最新情報</TabsTrigger>
@@ -61,8 +71,13 @@ export default function Home({ searchParams }: PageProps) {
               <TabsTrigger value="dev">Dev</TabsTrigger>
             </TabsList>
             <TabsContent value="infomation">
-              {' '}
-              <TestSpreadOperator test={16} />
+              <TestSpreadOperator test={1} />
+              API test
+              {data.map((index: any) => (
+                <div key={index.id}>
+                  {index.id}, {index.name}, {index.skill1_name}, {index.skill1_element}, {index.skill1_description}
+                </div>
+              ))}
             </TabsContent>
             <TabsContent value="infosite" className="my-4 w-full">
               <Card className="my-4">
@@ -180,7 +195,7 @@ export default function Home({ searchParams }: PageProps) {
                           <SelectItem value={index.value} key={index.value}>
                             <div className=" flex items-center">
                               <div
-                                className={`mr-2 h-3 w-3 rounded-2xl`}
+                                className={`mr-2 size-3 rounded-2xl`}
                                 style={{ backgroundColor: `${index.color}` }}
                               />
                               {index.label}

@@ -10,7 +10,7 @@ import { eventtimeline, timelinelist } from '@/data/timeline';
 const Timer = (items: timelinelist) => {
   //const endOfToday = endOfDay(now);
   const endDate = items.end;
-  const [countdown, setCountdown] = useState(format(endDate, 'MM-dd HH:mm'));
+  const [countdown, setCountdown] = useState(format(endDate, 'MM-dd HH:mm')); //ここは後で日付を変更&データからDate使用しないように変更
   const [countdownEnded, setCountdownEnded] = useState(false);
 
   useEffect(() => {

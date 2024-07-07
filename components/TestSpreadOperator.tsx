@@ -7,7 +7,7 @@ export const TestSpreadOperator = ({ test }: { test: number }) => {
       {[...Array(test)].map((_, i) => (
         <div
           key={i}
-          className=" rounded-md bg-muted p-4 shadow-sm hover:bg-slate-300 dark:bg-muted-foreground dark:hover:bg-slate-500"
+          className="rounded-md bg-muted p-4 shadow-sm hover:bg-slate-300 dark:bg-muted-foreground dark:hover:bg-slate-500"
         >
           {i + 1}
         </div>
