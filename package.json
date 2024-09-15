@@ -39,7 +39,7 @@
     "tailwindcss": "3.4.10",
     "tailwindcss-animate": "^1.0.7",
     "tocbot": "^4.28.2",
-    "typescript": "5.5.4"
+    "typescript": "5.6.2"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^14.2.4",
