@@ -4,7 +4,7 @@
     <img src="doc/images/logo.png" alt="Logo" width="128" height="128">
   </a>
 
-<h2 align="center">このファンまとめサイト UI</h2>
+<h2 align="center">このファンまとめサイト UI(サービス終了)</h2>
 
   <p align="center">
     サイトのUIソースコード
